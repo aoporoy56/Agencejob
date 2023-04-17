@@ -1,0 +1,8 @@
+.custom-footer {
+  background-color: #bbba6d; /* Couleur de fond du footer */
+  color: #0d0d0d; /* Couleur du texte du footer */
+
+  bottom: 0;
+  width: 100%;
+}
+

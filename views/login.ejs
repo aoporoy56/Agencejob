@@ -1,0 +1,48 @@
+<%- include('header'); -%>
+<div class="container right-panel-active">
+	<!-- Sign Up -->
+	<div class="container__form container--signup">
+		<form action="/formRegister/" method="post" class="form" id="form1">
+			<h2 class="form__title">S'inscrire</h2>
+			<input type="text" placeholder="Nom d'utilisateur" class="input" name="name" />
+			<input type="email" placeholder="Email" class="input" name="email"/>
+			<input type="password" placeholder="Mot de passe " class="input"  name="password"/>
+			<% if (typeof locals.errorMessage !== 'undefined') { %>
+				<div class="error-message"><%= locals.errorMessage %></div>
+			<% } %>
+      		<input type="password" placeholder="confirmer mot de passe" class="input" name="confirm_password"/>
+			<button type="submit" class="btn">S'inscrire</button>
+		</form>
+	</div>
+
+	<!-- Sign In -->
+	<div class="container__form container--signin">
+		<form action="/login" method="post"  class="form" id="form2">
+			<h2 class="form__title">Se connecter</h2>
+			<input type="email" placeholder="Email" class="input" name="email" />
+			<input type="password" placeholder="Password" class="input" name="password"/>
+			<a href="#" class="link">Mot de passe oublié?</a>
+			<button class="btn">Se connecter</button>
+      <div class="form-title">
+        <br>se connecter en tant qu'<a href="/home">invité</a>
+      </div>
+		</form>
+	</div>
+
+	<!-- Overlay -->
+	<div class="container__overlay">
+		<div class="overlay">
+			<div class="overlay__panel overlay--left">
+				<button class="btn" id="signIn">Se connecter</button>
+			</div>
+			<div class="overlay__panel overlay--right">
+				<button class="btn" id="signUp">S'inscrire</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<link rel="stylesheet" href="/css/login.css" />
+<script src="/js/login.js"></script>
+

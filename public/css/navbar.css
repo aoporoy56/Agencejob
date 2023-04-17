@@ -1,0 +1,15 @@
+.navbar {
+  background-color: #3f4db0; /* Couleur de fond du navbar */
+  color: #0d0d0d; /* Couleur du texte du footer */
+}
+
+.navbar-brand img {
+  max-width: 200px;
+  max-height: 30px;
+}
+
+.profile{
+
+  max-width: 200px;
+  max-height: 30px;
+}
